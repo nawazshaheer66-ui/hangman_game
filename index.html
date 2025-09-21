@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Teams Hangman Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1 style="color: #fff; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); margin-bottom: 20px;">Cricket Teams Hangman</h1>
+        
+        <canvas id="hangmanCanvas" class="hangman-canvas" width="400" height="300"></canvas>
+        
+        <div class="word-display" id="wordDisplay">XXXXXXXX</div>
+        <div class="tries-left" id="triesLeft">You have 5 attempts left!</div>
+        <div class="message" id="message">Guess a letter to start!</div>
+        
+        <div class="input-section">
+            <div class="input-label">Guess a letter:</div>
+            <input type="text" class="letter-input" id="letterInput" maxlength="1" placeholder="?">
+            <br>
+            <button class="guess-button" id="guessButton" onclick="makeGuess()">Guess!</button>
+        </div>
+        
+        <div class="guessed-letters" id="guessedLetters">Guessed letters: </div>
+        
+        <button class="restart-button" onclick="restartGame()">New Game</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
